@@ -5,11 +5,11 @@ pub struct CliNop {
 }
 
 impl CliNop {
-    fn new(args: Vec<String>) -> CliNop {
+    pub fn new(args: Vec<String>) -> CliNop {
         CliNop { args }
     }
 
-    fn get<T: FromStr>(&self, arg: &str) -> Option<T> {
+    pub fn get<T: FromStr>(&self, arg: &str) -> Option<T> {
         for (indx, argument) in self.args.iter().enumerate() {
             if argument.trim_start_matches('-') == arg
                 && indx + 1 < self.args.len()
