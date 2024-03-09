@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-struct CliNop {
+pub struct CliNop {
     args: Vec<String>,
 }
 
