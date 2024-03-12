@@ -1,7 +1,7 @@
 use std::str::FromStr;
 
 pub struct CliNop {
-    args: Vec<String>,
+    pub args: Vec<String>,
 }
 
 impl CliNop {
